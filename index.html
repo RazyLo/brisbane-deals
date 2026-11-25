@@ -21,6 +21,7 @@ header .meta{opacity:.92;font-size:14px;line-height:1.6}
 @media(min-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
 .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;flex-direction:column}
 .ph{height:130px;background:linear-gradient(135deg,#eef1ec,#dde5dc);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#7a8a7d}
+.ph-imgwrap{background:#fff;padding:6px}.ph-img{max-width:100%;max-height:118px;object-fit:contain;display:block}
 .ph-cat{font-size:13px;background:#fff;padding:2px 10px;border-radius:999px}
 .ph-txt{font-size:13px}
 .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:5px;flex:1}
@@ -45,7 +46,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <button class="tab" id="tabC" onclick="showStore('coles')">Coles（68 件）</button>
   </div>
   <input class="search" id="q" type="search" placeholder="搜索商品名（英文）…" oninput="applyFilter()">
-<section class="store" id="woolworths">
+<section class="store" id="woolworths">woolworths
   <div class="chips"><button class="chip on" data-cat="全部">全部</button><button class="chip" data-cat="健康美容">健康美容</button><button class="chip" data-cat="清洁家居">清洁家居</button><button class="chip" data-cat="零食糖果">零食糖果</button><button class="chip" data-cat="饮品">饮品</button></div>
   <div class="grid">
 <article class="card" data-cat="健康美容" data-name="oral-b io2 electric toothbrush set pk 1">
@@ -89,7 +90,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="健康美容" data-name="gillette comfort glide shave gel refresh 195g">
-  <div class="ph"><span class="ph-cat">健康美容</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6071964_6130.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Gillette Comfort Glide Shave Gel Refresh 195g</h3>
@@ -109,7 +110,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="清洁家居" data-name="ka pod laundry capsules pk 45">
-  <div class="ph"><span class="ph-cat">清洁家居</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/17/177240_10172.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Ka Pod Laundry Capsules Pk 45</h3>
@@ -129,7 +130,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="lindt lindor gift box 232-235g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8731258.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Lindt Lindor Gift Box 232-235g</h3>
@@ -139,7 +140,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="toblerone assorted pralines 313g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6085751_8660.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Toblerone Assorted Pralines 313g</h3>
@@ -179,7 +180,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="健康美容" data-name="nature’s way adult vita gummies multivitamin pk 120~">
-  <div class="ph"><span class="ph-cat">健康美容</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9114075.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Nature’s Way Adult Vita Gummies Multivitamin Pk 120~</h3>
@@ -229,7 +230,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="饮品" data-name="kirks soft drink varieties 12 x 300ml">
-  <div class="ph"><span class="ph-cat">饮品</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6093286_8502.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Kirks Soft Drink Varieties 12 x 300ml</h3>
@@ -289,7 +290,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="maltesers or celebrations gift box 290-360g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1860660.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Maltesers or Celebrations Gift Box 290-360g</h3>
@@ -309,7 +310,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="饮品" data-name="suntory boss iced coffee 4 x 237ml">
-  <div class="ph"><span class="ph-cat">饮品</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5161561.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Suntory Boss Iced Coffee 4 x 237ml</h3>
@@ -329,7 +330,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="清洁家居" data-name="harpic power toilet rim block pk 2">
-  <div class="ph"><span class="ph-cat">清洁家居</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://static.chemistwarehouse.co.nz/ams/media/pi/135363/2DF_200.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Harpic Power Toilet Rim Block Pk 2</h3>
@@ -349,7 +350,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="清洁家居" data-name="quilton 3 ply toilet tissue pk 8">
-  <div class="ph"><span class="ph-cat">清洁家居</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/15/158767_8286.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Quilton 3 Ply Toilet Tissue Pk 8</h3>
@@ -389,7 +390,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="arnott’s quatro bars 160g pk 5">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6054551_15121.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Arnott’s Quatro Bars 160g Pk 5</h3>
@@ -409,7 +410,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="smith’s mini canisters 65-150g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1970920.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Smith’s Mini Canisters 65-150g</h3>
@@ -419,7 +420,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="olina&#x27;s bakehouse artisan crackers 90-100g – excludes gluten free varieties">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3491099.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Olina&#x27;s Bakehouse Artisan Crackers 90-100g – Excludes Gluten Free Varieties</h3>
@@ -449,7 +450,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="vege rice crackers 75g – from the health food aisle">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4352338.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Vege Rice Crackers 75g – From the Health Food Aisle</h3>
@@ -509,7 +510,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="cobs microwave popcorn 85g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6623200.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Cobs Microwave Popcorn 85g</h3>
@@ -521,7 +522,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
   <p class="empty" hidden>没有符合条件的商品，换个关键词或分类试试。</p>
 </section>
-<section class="store" id="coles">
+<section class="store" id="coles">coles
   <div class="chips"><button class="chip on" data-cat="全部">全部</button><button class="chip" data-cat="健康美容">健康美容</button><button class="chip" data-cat="清洁家居">清洁家居</button><button class="chip" data-cat="饮品">饮品</button><button class="chip" data-cat="零食糖果">零食糖果</button></div>
   <div class="grid">
 <article class="card" data-cat="健康美容" data-name="hydralyte effervescent electrolyte tablets 40 pack^">
@@ -565,7 +566,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="清洁家居" data-name="bref in the bowl toilet cleaner two pack 100g">
-  <div class="ph"><span class="ph-cat">清洁家居</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6420224.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Bref In The Bowl Toilet Cleaner Two Pack 100g</h3>
@@ -615,7 +616,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="清洁家居" data-name="handee ultra paper towel 2 pack">
-  <div class="ph"><span class="ph-cat">清洁家居</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5294180.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Handee Ultra Paper Towel 2 Pack</h3>
@@ -665,7 +666,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="清洁家居" data-name="downy unstopables in-wash scent booster beads 422g">
-  <div class="ph"><span class="ph-cat">清洁家居</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4304823.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Downy Unstopables In-Wash Scent Booster Beads 422g</h3>
@@ -685,7 +686,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="lindt lindor cornet 268g-272g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1998726.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Lindt Lindor Cornet 268g-272g</h3>
@@ -695,7 +696,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="nestlé quality street tub 500g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6620755.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Nestlé Quality Street Tub 500g</h3>
@@ -785,7 +786,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="lindt lindor christmas gift box 148g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1154780.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Lindt Lindor Christmas Gift Box 148g</h3>
@@ -865,7 +866,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="清洁家居" data-name="glen 20 scentsations disinfectant spray 375g">
-  <div class="ph"><span class="ph-cat">清洁家居</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7991399.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Glen 20 Scentsations Disinfectant Spray 375g</h3>
@@ -975,7 +976,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="饮品" data-name="jarrah latte instant coffee 250g">
-  <div class="ph"><span class="ph-cat">饮品</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5436900.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Jarrah Latte Instant Coffee 250g</h3>
@@ -995,7 +996,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="mars fun size 132g-192g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4382463.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Mars Fun Size 132g-192g</h3>
@@ -1015,7 +1016,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="darrell lea block chocolate 160g-170g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1062036.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Darrell Lea Block Chocolate 160g-170g</h3>
@@ -1065,7 +1066,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
 <article class="card" data-cat="零食糖果" data-name="harvest snaps protein puffs 75g">
-  <div class="ph"><span class="ph-cat">零食糖果</span><span class="ph-txt">暂无图片</span></div>
+  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1967981.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Harvest Snaps Protein Puffs 75g</h3>
@@ -1210,7 +1211,7 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
 </div>
 <footer>
   <p>数据来源：OzBargain 本周半价目录汇总（https://www.ozbargain.com.au/node/985018），价格为昆士兰州（QLD）目录参考价，各门店实际价格可能有差异，请以门店为准。</p>
-  <p>说明：商品图片保存在促销工具内部，公开页面暂时无法直接引用，所以本页先用分类占位图，商品名、价格和折扣均为真实抓取数据。</p>
+  <p>说明：本页 115 件商品中已有 26 件配上真实产品图（Woolworths 15 件、Coles 11 件，图片来自超市官网图库及公开商品图来源），其余商品暂时用分类占位图，配图仍在持续补齐中；商品名、价格和折扣均为真实抓取数据。</p>
 </footer>
 <script>
 var cur='woolworths';
