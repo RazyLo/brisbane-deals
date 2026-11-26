@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>布里斯班超市促销 · 2026年11月25日 – 12月1日</title>
+<title>超市折扣信息 · 2026年11月25日 – 12月1日</title>
 <style>
 *{box-sizing:border-box}body{margin:0;font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#f4f5f3;color:#1c2420}
 header{background:#0b6e35;color:#fff;padding:22px 16px 16px}
@@ -17,13 +17,22 @@ header .meta{opacity:.92;font-size:14px;line-height:1.6}
 .chips{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:12px}
 .chip{padding:6px 13px;border-radius:999px;border:1px solid #b9c6bb;background:#fff;cursor:pointer;font-size:14px}
 .chip.on{background:#1c2420;color:#fff;border-color:#1c2420}
+.type-row{display:flex;flex-wrap:wrap;gap:7px;margin:4px 0 4px}
+.type-chip{padding:7px 14px;border-radius:999px;border:1px solid #0b6e35;background:#fff;cursor:pointer;font-size:14px;font-weight:700;color:#0b6e35}
+.type-chip.on{background:#0b6e35;color:#fff;border-color:#0b6e35}
+.type-note{font-size:13px;color:#5c6a5f;margin:0 0 10px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
 @media(min-width:640px){.grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
 .card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.08);display:flex;flex-direction:column}
 .ph{height:130px;background:linear-gradient(135deg,#eef1ec,#dde5dc);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:#7a8a7d}
-.ph-imgwrap{background:#fff;padding:6px}.ph-img{max-width:100%;max-height:118px;object-fit:contain;display:block}
+.ph-imgwrap{background:#fff;padding:6px;position:relative}
+.ph-img{max-width:100%;max-height:118px;object-fit:contain;display:block}
 .ph-cat{font-size:13px;background:#fff;padding:2px 10px;border-radius:999px}
 .ph-txt{font-size:13px}
+.badge{position:absolute;top:8px;left:8px;z-index:2;padding:3px 10px;border-radius:999px;font-size:13px;font-weight:800;color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25)}
+.badge-half{background:#c8102e}
+.badge-below{background:#b26a00}
+.badge-promo{background:#1565c0}
 .body{padding:10px 12px 12px;display:flex;flex-direction:column;gap:5px;flex:1}
 .cat{font-size:12px;color:#6b7a6e}
 .body h3{margin:0;font-size:15px;line-height:1.35;flex:1}
@@ -37,20 +46,22 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
 </head>
 <body>
 <header>
-  <h1>布里斯班超市促销</h1>
-  <div class="meta">本期目录：2026年11月25日 – 12月1日<br>生成日期：2026年11月26日 · 共 115 件半价或更低（Woolworths 47 件 · Coles 68 件）<br>范围：只收零食、日用品、饮料</div>
+  <h1>超市折扣信息</h1>
+  <div class="meta">本期目录：2026年11月25日 – 12月1日<br>生成日期：2026年11月26日 · 共 115 件（Woolworths 47 件 · Coles 68 件）<br>范围：只收零食、日用品、饮料</div>
 </header>
 <div class="wrap">
   <div class="tabs">
     <button class="tab on-w" id="tabW" onclick="showStore('woolworths')">Woolworths（47 件）</button>
     <button class="tab" id="tabC" onclick="showStore('coles')">Coles（68 件）</button>
   </div>
+  <div class="type-row" id="typeChips"><button class="type-chip on" data-type="全部">全部（115 件）</button><button class="type-chip" data-type="half">半价（100 件）</button><button class="type-chip" data-type="below">低于半价（15 件）</button><button class="type-chip" data-type="promo">促销（0 件）</button></div>
+  <p class="type-note">本期目录全部为半价或更低，暂无折扣低于 50% 的促销商品，所以「促销」目前是 0 件。</p>
   <input class="search" id="q" type="search" placeholder="搜索商品名（英文）…" oninput="applyFilter()">
-<section class="store" id="woolworths">woolworths
+<section class="store" id="woolworths">
   <div class="chips"><button class="chip on" data-cat="全部">全部</button><button class="chip" data-cat="健康美容">健康美容</button><button class="chip" data-cat="清洁家居">清洁家居</button><button class="chip" data-cat="零食糖果">零食糖果</button><button class="chip" data-cat="饮品">饮品</button></div>
   <div class="grid">
-<article class="card" data-cat="健康美容" data-name="oral-b io2 electric toothbrush set pk 1">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9069072.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="below" data-name="oral-b io2 electric toothbrush set pk 1">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9069072.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Oral-B iO2 Electric Toothbrush Set Pk 1</h3>
@@ -59,8 +70,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="sukin body wash 1 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2994050.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="below" data-name="sukin body wash 1 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2994050.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Sukin Body Wash 1 Litre</h3>
@@ -69,8 +80,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="sukin shampoo or conditioner 1 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3154930.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="below" data-name="sukin shampoo or conditioner 1 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3154930.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Sukin Shampoo or Conditioner 1 Litre</h3>
@@ -79,8 +90,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="sukin signature foaming facial cleanser pump 125ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2994287.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="below" data-name="sukin signature foaming facial cleanser pump 125ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2994287.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Sukin Signature Foaming Facial Cleanser Pump 125ml</h3>
@@ -89,8 +100,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="gillette comfort glide shave gel refresh 195g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6071964_6130.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="below" data-name="gillette comfort glide shave gel refresh 195g">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6071964_6130.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Gillette Comfort Glide Shave Gel Refresh 195g</h3>
@@ -99,8 +110,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="finish ultimate plus dishwasher tablets pk 80">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6066300_13330.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="finish ultimate plus dishwasher tablets pk 80">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6066300_13330.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Finish Ultimate Plus Dishwasher Tablets Pk 80</h3>
@@ -109,8 +120,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="ka pod laundry capsules pk 45">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/17/177240_10172.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="ka pod laundry capsules pk 45">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/17/177240_10172.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Ka Pod Laundry Capsules Pk 45</h3>
@@ -119,8 +130,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="cadbury favourites 686-700g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1115507.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="cadbury favourites 686-700g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1115507.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Cadbury Favourites 686-700g</h3>
@@ -129,8 +140,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="lindt lindor gift box 232-235g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8731258.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="lindt lindor gift box 232-235g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8731258.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Lindt Lindor Gift Box 232-235g</h3>
@@ -139,8 +150,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="toblerone assorted pralines 313g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6085751_8660.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="toblerone assorted pralines 313g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6085751_8660.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Toblerone Assorted Pralines 313g</h3>
@@ -149,8 +160,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="omo active clean laundry liquid 2 litre, powder 2 kg or capsules pk 28">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2731007.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="omo active clean laundry liquid 2 litre, powder 2 kg or capsules pk 28">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2731007.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>OMO Active Clean Laundry Liquid 2 Litre, Powder 2 kg or Capsules Pk 28</h3>
@@ -159,8 +170,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="dynamo professional laundry liquid 2 litre or capsules pk 29">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7035626.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="dynamo professional laundry liquid 2 litre or capsules pk 29">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7035626.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Dynamo Professional Laundry Liquid 2 Litre or Capsules Pk 29</h3>
@@ -169,8 +180,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="maybelline lash sensational sky high mascara 7.2ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3959190.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="maybelline lash sensational sky high mascara 7.2ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3959190.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Maybelline Lash Sensational Sky High Mascara 7.2ml</h3>
@@ -179,8 +190,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="nature’s way adult vita gummies multivitamin pk 120~">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9114075.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="nature’s way adult vita gummies multivitamin pk 120~">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9114075.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Nature’s Way Adult Vita Gummies Multivitamin Pk 120~</h3>
@@ -189,8 +200,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="l’oréal excellence hair colour">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3616671.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="l’oréal excellence hair colour">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3616671.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>L’Oréal Excellence Hair Colour</h3>
@@ -199,8 +210,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="tiny toblerone assorted 368g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1830717.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="tiny toblerone assorted 368g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1830717.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Tiny Toblerone Assorted 368g</h3>
@@ -209,8 +220,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="biozet attack laundry liquid 2 litre or powder 2 kg">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2688214.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="biozet attack laundry liquid 2 litre or powder 2 kg">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2688214.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Biozet Attack Laundry Liquid 2 Litre or Powder 2 kg</h3>
@@ -219,8 +230,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="coca-cola, mount franklin, sprite or fanta soft drink varieties 10 x 375ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1849307.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="coca-cola, mount franklin, sprite or fanta soft drink varieties 10 x 375ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1849307.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Coca-Cola, Mount Franklin, Sprite or Fanta Soft Drink Varieties 10 x 375ml</h3>
@@ -229,8 +240,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="kirks soft drink varieties 12 x 300ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6093286_8502.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="kirks soft drink varieties 12 x 300ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6093286_8502.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Kirks Soft Drink Varieties 12 x 300ml</h3>
@@ -239,8 +250,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="toblerone 340-360g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1115653.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="toblerone 340-360g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1115653.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Toblerone 340-360g</h3>
@@ -249,8 +260,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="gem body wash 900ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1688740.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="gem body wash 900ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1688740.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Gem Body Wash 900ml</h3>
@@ -259,8 +270,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="monster energy drink 4 x 500ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2785094.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="monster energy drink 4 x 500ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2785094.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Monster Energy Drink 4 x 500ml</h3>
@@ -269,8 +280,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="herbal essences shampoo or conditioner 600ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3417799.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="herbal essences shampoo or conditioner 600ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3417799.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Herbal Essences Shampoo or Conditioner 600ml</h3>
@@ -279,8 +290,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="original source shower gel 1 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1873265.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="original source shower gel 1 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1873265.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Original Source Shower Gel 1 Litre</h3>
@@ -289,8 +300,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="maltesers or celebrations gift box 290-360g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1860660.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="maltesers or celebrations gift box 290-360g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1860660.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Maltesers or Celebrations Gift Box 290-360g</h3>
@@ -299,8 +310,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="garnier fructis hair food 390ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3979642.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="garnier fructis hair food 390ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3979642.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Garnier Fructis Hair Food 390ml</h3>
@@ -309,8 +320,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="suntory boss iced coffee 4 x 237ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5161561.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="suntory boss iced coffee 4 x 237ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5161561.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Suntory Boss Iced Coffee 4 x 237ml</h3>
@@ -319,8 +330,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="palmolive shower gel 1 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4767399.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="palmolive shower gel 1 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4767399.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Palmolive Shower Gel 1 Litre</h3>
@@ -329,8 +340,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="harpic power toilet rim block pk 2">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://static.chemistwarehouse.co.nz/ams/media/pi/135363/2DF_200.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="harpic power toilet rim block pk 2">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://static.chemistwarehouse.co.nz/ams/media/pi/135363/2DF_200.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Harpic Power Toilet Rim Block Pk 2</h3>
@@ -339,8 +350,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="deep heat extra strength cream 100g~">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7489995.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="deep heat extra strength cream 100g~">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7489995.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Deep Heat Extra Strength Cream 100g~</h3>
@@ -349,8 +360,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="quilton 3 ply toilet tissue pk 8">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/15/158767_8286.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="quilton 3 ply toilet tissue pk 8">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/15/158767_8286.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Quilton 3 Ply Toilet Tissue Pk 8</h3>
@@ -359,8 +370,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="nescafé coffee sachets pk 8-10">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5694097.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="nescafé coffee sachets pk 8-10">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5694097.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Nescafé Coffee Sachets Pk 8-10</h3>
@@ -369,8 +380,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="fairy platinum plus dishwashing liquid 495ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6050690_6682.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="fairy platinum plus dishwashing liquid 495ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6050690_6682.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Fairy Platinum Plus Dishwashing Liquid 495ml</h3>
@@ -379,8 +390,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="cadbury chocolate bites 120-150g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5888617.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="cadbury chocolate bites 120-150g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5888617.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Cadbury Chocolate Bites 120-150g</h3>
@@ -389,8 +400,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="arnott’s quatro bars 160g pk 5">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6054551_15121.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="arnott’s quatro bars 160g pk 5">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/60/6054551_15121.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Arnott’s Quatro Bars 160g Pk 5</h3>
@@ -399,8 +410,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="darrell lea liquorice twists, batch 37 or all sorts 260-280g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3449241.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="darrell lea liquorice twists, batch 37 or all sorts 260-280g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3449241.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Darrell Lea Liquorice Twists, Batch 37 or All Sorts 260-280g</h3>
@@ -409,8 +420,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="smith’s mini canisters 65-150g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1970920.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="smith’s mini canisters 65-150g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1970920.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Smith’s Mini Canisters 65-150g</h3>
@@ -419,8 +430,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="olina&#x27;s bakehouse artisan crackers 90-100g – excludes gluten free varieties">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3491099.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="olina&#x27;s bakehouse artisan crackers 90-100g – excludes gluten free varieties">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3491099.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Olina&#x27;s Bakehouse Artisan Crackers 90-100g – Excludes Gluten Free Varieties</h3>
@@ -429,8 +440,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="thins potato chips 175g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6833891.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="thins potato chips 175g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6833891.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Thins Potato Chips 175g</h3>
@@ -439,8 +450,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="air fries share bag 90g – from the health food aisle">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/07/071929_8498.webp" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="air fries share bag 90g – from the health food aisle">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://www.mailerdesk.com/images/products/126/07/071929_8498.webp" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Air Fries Share Bag 90g – From the Health Food Aisle</h3>
@@ -449,8 +460,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="vege rice crackers 75g – from the health food aisle">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4352338.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="vege rice crackers 75g – from the health food aisle">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4352338.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Vege Rice Crackers 75g – From the Health Food Aisle</h3>
@@ -459,8 +470,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="coca-cola, sprite or fanta soft drink varieties 1.25 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/123011.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="coca-cola, sprite or fanta soft drink varieties 1.25 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/123011.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Coca-Cola, Sprite or Fanta Soft Drink Varieties 1.25 Litre</h3>
@@ -469,8 +480,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="belvita breakfast biscuits 300g pk 6 or sandwich breakfast biscuits 253g pk 5">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9109880.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="belvita breakfast biscuits 300g pk 6 or sandwich breakfast biscuits 253g pk 5">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9109880.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>BelVita Breakfast Biscuits 300g Pk 6 or Sandwich Breakfast Biscuits 253g Pk 5</h3>
@@ -479,8 +490,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="infuzions 90g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5007335.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="infuzions 90g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5007335.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Infuzions 90g</h3>
@@ -489,8 +500,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="palmolive foaming hand wash 250ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9216348.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="palmolive foaming hand wash 250ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9216348.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Palmolive Foaming Hand Wash 250ml</h3>
@@ -499,8 +510,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="nestlé medium chocolate bars 35-50g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4457438.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="nestlé medium chocolate bars 35-50g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4457438.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Nestlé Medium Chocolate Bars 35-50g</h3>
@@ -509,8 +520,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.woolworths.com.au/shop/browse/specials" target="_blank" rel="noopener">Woolworths 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="cobs microwave popcorn 85g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6623200.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="cobs microwave popcorn 85g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6623200.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Cobs Microwave Popcorn 85g</h3>
@@ -520,13 +531,13 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
   </div>
-  <p class="empty" hidden>没有符合条件的商品，换个关键词或分类试试。</p>
+  <p class="empty" hidden>没有符合条件的商品，换个关键词、分类或折扣类型试试。</p>
 </section>
-<section class="store" id="coles">coles
+<section class="store" id="coles">
   <div class="chips"><button class="chip on" data-cat="全部">全部</button><button class="chip" data-cat="健康美容">健康美容</button><button class="chip" data-cat="清洁家居">清洁家居</button><button class="chip" data-cat="饮品">饮品</button><button class="chip" data-cat="零食糖果">零食糖果</button></div>
   <div class="grid">
-<article class="card" data-cat="健康美容" data-name="hydralyte effervescent electrolyte tablets 40 pack^">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1991068.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="below" data-name="hydralyte effervescent electrolyte tablets 40 pack^">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1991068.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Hydralyte Effervescent Electrolyte Tablets 40 Pack^</h3>
@@ -535,8 +546,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="swisse ultiboost magnesium glycinate tablets 120 pack^">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1085519.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="below" data-name="swisse ultiboost magnesium glycinate tablets 120 pack^">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1085519.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Swisse Ultiboost Magnesium Glycinate Tablets 120 Pack^</h3>
@@ -545,8 +556,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="blackmores omega mini double concentrate capsules 200 pack^">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2268955.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="below" data-name="blackmores omega mini double concentrate capsules 200 pack^">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2268955.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Blackmores Omega Mini Double Concentrate Capsules 200 Pack^</h3>
@@ -555,8 +566,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="radiant laundry liquid 2 litre or capsules 28 pack">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4144352.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="below" data-name="radiant laundry liquid 2 litre or capsules 28 pack">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4144352.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Radiant Laundry Liquid 2 Litre or Capsules 28 Pack</h3>
@@ -565,8 +576,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="bref in the bowl toilet cleaner two pack 100g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6420224.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="below" data-name="bref in the bowl toilet cleaner two pack 100g">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6420224.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Bref In The Bowl Toilet Cleaner Two Pack 100g</h3>
@@ -575,8 +586,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="finish ultimate plus dishwashing tablets 70 pack">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1633818.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="below" data-name="finish ultimate plus dishwashing tablets 70 pack">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1633818.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Finish Ultimate Plus Dishwashing Tablets 70 Pack</h3>
@@ -585,8 +596,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="pine o cleen disinfectant liquid 1.25 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8090.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="below" data-name="pine o cleen disinfectant liquid 1.25 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8090.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Pine O Cleen Disinfectant Liquid 1.25 Litre</h3>
@@ -595,8 +606,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="golden circle tetra fruit drink 1 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5127235.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="below" data-name="golden circle tetra fruit drink 1 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5127235.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Golden Circle Tetra Fruit Drink 1 Litre</h3>
@@ -605,8 +616,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="white king power toilet cleaner 700ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6478483.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="below" data-name="white king power toilet cleaner 700ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6478483.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>White King Power Toilet Cleaner 700mL</h3>
@@ -615,8 +626,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="handee ultra paper towel 2 pack">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5294180.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="below" data-name="handee ultra paper towel 2 pack">
+  <div class="ph ph-imgwrap"><span class="badge badge-below">低于半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5294180.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Handee Ultra Paper Towel 2 Pack</h3>
@@ -625,8 +636,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="blackmores fish oil 1000mg capsules 400 pack^">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4941770.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="blackmores fish oil 1000mg capsules 400 pack^">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4941770.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Blackmores Fish Oil 1000mg Capsules 400 Pack^</h3>
@@ -635,8 +646,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="swisse ultiboost odourless high strength wild fish oil capsules 200 pack^">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8099089.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="swisse ultiboost odourless high strength wild fish oil capsules 200 pack^">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8099089.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Swisse Ultiboost Odourless High Strength Wild Fish Oil Capsules 200 Pack^</h3>
@@ -645,8 +656,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="revlon colorstay pressed powder 8.4g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3021619.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="revlon colorstay pressed powder 8.4g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3021619.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Revlon Colorstay Pressed Powder 8.4g</h3>
@@ -655,8 +666,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="omo ultimate laundry liquid 2 litre or capsules 28 pack">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5004891.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="omo ultimate laundry liquid 2 litre or capsules 28 pack">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5004891.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Omo Ultimate Laundry Liquid 2 Litre or Capsules 28 pack</h3>
@@ -665,8 +676,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="downy unstopables in-wash scent booster beads 422g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4304823.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="downy unstopables in-wash scent booster beads 422g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4304823.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Downy Unstopables In-Wash Scent Booster Beads 422g</h3>
@@ -675,8 +686,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="cadbury favourites 686g-700g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1115507.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="cadbury favourites 686g-700g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1115507.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Cadbury Favourites 686g-700g</h3>
@@ -685,8 +696,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="lindt lindor cornet 268g-272g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1998726.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="lindt lindor cornet 268g-272g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1998726.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Lindt Lindor Cornet 268g-272g</h3>
@@ -695,8 +706,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="nestlé quality street tub 500g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6620755.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="nestlé quality street tub 500g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6620755.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Nestlé Quality Street Tub 500g</h3>
@@ -705,8 +716,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="banana boat sport sunscreen spf50+ 400g^^">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7211514.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="banana boat sport sunscreen spf50+ 400g^^">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7211514.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Banana Boat Sport Sunscreen SPF50+ 400g^^</h3>
@@ -715,8 +726,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="l&#x27;oréal paris infallible 3 second mist 75ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7707101.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="l&#x27;oréal paris infallible 3 second mist 75ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7707101.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>L&#x27;Oréal Paris Infallible 3 Second Mist 75mL</h3>
@@ -725,8 +736,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="maybelline sky tubes tubing mascara 7ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1993391.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="maybelline sky tubes tubing mascara 7ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1993391.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Maybelline Sky Tubes Tubing Mascara 7mL</h3>
@@ -735,8 +746,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="biozet attack plus laundry liquid 2 litre or powder 2kg">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5095627.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="biozet attack plus laundry liquid 2 litre or powder 2kg">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5095627.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Biozet Attack Plus Laundry Liquid 2 Litre or Powder 2kg</h3>
@@ -745,8 +756,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="maybelline fit me matte + poreless foundation 30ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2363774.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="maybelline fit me matte + poreless foundation 30ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2363774.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Maybelline Fit Me Matte + Poreless Foundation 30mL</h3>
@@ -755,8 +766,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="nivea sun protect &amp; moisture sunscreen spf50+ 400ml^^">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2794164.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="nivea sun protect &amp; moisture sunscreen spf50+ 400ml^^">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2794164.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Nivea Sun Protect &amp; Moisture Sunscreen SPF50+ 400mL^^</h3>
@@ -765,8 +776,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="cold power laundry liquid 2 litre or capsules 29 pack">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3774606.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="cold power laundry liquid 2 litre or capsules 29 pack">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3774606.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Cold Power Laundry Liquid 2 Litre or Capsules 29 Pack</h3>
@@ -775,8 +786,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="rimmel wonderbond lashfiller mascara 11ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1441748.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="rimmel wonderbond lashfiller mascara 11ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1441748.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Rimmel Wonderbond Lashfiller Mascara 11mL</h3>
@@ -785,8 +796,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="lindt lindor christmas gift box 148g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1154780.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="lindt lindor christmas gift box 148g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1154780.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Lindt Lindor Christmas Gift Box 148g</h3>
@@ -795,8 +806,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="john frieda shampoo or conditioner 250ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1649068.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="john frieda shampoo or conditioner 250ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1649068.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>John Frieda Shampoo or Conditioner 250mL</h3>
@@ -805,8 +816,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="pantene shampoo 900ml or conditioner 800ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2290557.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="pantene shampoo 900ml or conditioner 800ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2290557.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Pantene Shampoo 900mL or Conditioner 800mL</h3>
@@ -815,8 +826,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="pepsi, solo, sunkist or schweppes lemonade soft drink 10x375ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1310364.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="pepsi, solo, sunkist or schweppes lemonade soft drink 10x375ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1310364.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Pepsi, Solo, Sunkist or Schweppes Lemonade Soft Drink 10x375mL</h3>
@@ -825,8 +836,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="nivea shower body wash 1 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3227206.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="nivea shower body wash 1 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3227206.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Nivea Shower Body Wash 1 Litre</h3>
@@ -835,8 +846,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="sorbent 3-ply soft &amp; strong toilet paper 16 pack">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3974092.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="sorbent 3-ply soft &amp; strong toilet paper 16 pack">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/3/3974092.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Sorbent 3-Ply Soft &amp; Strong Toilet Paper 16 Pack</h3>
@@ -845,8 +856,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="nivea luminous630 skin glow micellar water 400ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1862291.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="nivea luminous630 skin glow micellar water 400ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1862291.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Nivea Luminous630 Skin Glow Micellar Water 400mL</h3>
@@ -855,8 +866,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="dettol pro fresh shower gel 950ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1878928.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="dettol pro fresh shower gel 950ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1878928.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Dettol Pro Fresh Shower Gel 950mL</h3>
@@ -865,8 +876,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="glen 20 scentsations disinfectant spray 375g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7991399.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="glen 20 scentsations disinfectant spray 375g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7991399.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Glen 20 Scentsations Disinfectant Spray 375g</h3>
@@ -875,8 +886,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="johnson&#x27;s body care cream body wash 1 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9216825.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="johnson&#x27;s body care cream body wash 1 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9216825.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Johnson&#x27;s Body Care Cream Body Wash 1 Litre</h3>
@@ -885,8 +896,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="v energy drink 4x250ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5486362.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="v energy drink 4x250ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5486362.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>V Energy Drink 4x250mL</h3>
@@ -895,8 +906,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="nescafé espresso concentrate liquid coffee 500ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8055673.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="nescafé espresso concentrate liquid coffee 500ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8055673.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Nescafé Espresso Concentrate Liquid Coffee 500mL</h3>
@@ -905,8 +916,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="sally hansen hard as nails strength treatment 13.3ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7416073.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="sally hansen hard as nails strength treatment 13.3ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7416073.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Sally Hansen Hard As Nails Strength Treatment 13.3mL</h3>
@@ -915,8 +926,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="colgate sensitive pro relief toothpaste 110g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8624032.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="colgate sensitive pro relief toothpaste 110g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/8/8624032.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Colgate Sensitive Pro Relief Toothpaste 110g</h3>
@@ -925,8 +936,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="nivea antiperspirant aerosol deodorant 250ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6375243.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="nivea antiperspirant aerosol deodorant 250ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6375243.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Nivea Antiperspirant Aerosol Deodorant 250mL</h3>
@@ -935,8 +946,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="nivea women&#x27;s invisible black &amp; white clear antiperspirant aerosol deodorant 250ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1996403.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="nivea women&#x27;s invisible black &amp; white clear antiperspirant aerosol deodorant 250ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1996403.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Nivea Women&#x27;s Invisible Black &amp; White Clear Antiperspirant Aerosol Deodorant 250mL</h3>
@@ -945,8 +956,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="comfort fabric conditioner 800ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1019332.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="comfort fabric conditioner 800ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1019332.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Comfort Fabric Conditioner 800mL</h3>
@@ -955,8 +966,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="健康美容" data-name="nivea rich nourishing body lotion 400ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7198992.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="健康美容" data-type="half" data-name="nivea rich nourishing body lotion 400ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/7/7198992.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">健康美容</div>
     <h3>Nivea Rich Nourishing Body Lotion 400mL</h3>
@@ -965,8 +976,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="nescafé protein coffee sachets 8 pack">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2062712.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="nescafé protein coffee sachets 8 pack">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2062712.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Nescafé Protein Coffee Sachets 8 Pack</h3>
@@ -975,8 +986,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="jarrah latte instant coffee 250g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5436900.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="jarrah latte instant coffee 250g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5436900.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Jarrah Latte Instant Coffee 250g</h3>
@@ -985,8 +996,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="twinings live well tea bags 18 pack-22 pack">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4986133.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="twinings live well tea bags 18 pack-22 pack">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4986133.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Twinings Live Well Tea Bags 18 Pack-22 Pack</h3>
@@ -995,8 +1006,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="mars fun size 132g-192g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4382463.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="mars fun size 132g-192g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4382463.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Mars Fun Size 132g-192g</h3>
@@ -1005,8 +1016,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="nestlé or allen&#x27;s block 118g-180g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1330714.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="nestlé or allen&#x27;s block 118g-180g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1330714.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Nestlé or Allen&#x27;s Block 118g-180g</h3>
@@ -1015,8 +1026,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="darrell lea block chocolate 160g-170g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1062036.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="darrell lea block chocolate 160g-170g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1062036.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Darrell Lea Block Chocolate 160g-170g</h3>
@@ -1025,8 +1036,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="清洁家居" data-name="morning fresh dishwashing liquid 400ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2225395.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="清洁家居" data-type="half" data-name="morning fresh dishwashing liquid 400ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2225395.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">清洁家居</div>
     <h3>Morning Fresh Dishwashing Liquid 400mL</h3>
@@ -1035,8 +1046,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="lipton ice tea 1.5 litre">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6344308.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="lipton ice tea 1.5 litre">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6344308.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Lipton Ice Tea 1.5 Litre</h3>
@@ -1045,8 +1056,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="cadbury chocolate fingers or biscuits 120g-167g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1742777.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="cadbury chocolate fingers or biscuits 120g-167g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1742777.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Cadbury Chocolate Fingers or Biscuits 120g-167g</h3>
@@ -1055,8 +1066,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="mcvitie&#x27;s plain or chocolate digestive biscuits 232g-355g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6066602.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="mcvitie&#x27;s plain or chocolate digestive biscuits 232g-355g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6066602.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>McVitie&#x27;s Plain or Chocolate Digestive Biscuits 232g-355g</h3>
@@ -1065,8 +1076,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="harvest snaps protein puffs 75g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1967981.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="harvest snaps protein puffs 75g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1967981.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Harvest Snaps Protein Puffs 75g</h3>
@@ -1075,8 +1086,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="life savers lollies 150g-205g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4952164.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="life savers lollies 150g-205g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4952164.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Life Savers Lollies 150g-205g</h3>
@@ -1085,8 +1096,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="oreo mini creme biscuits 10 pack 204g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9260124.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="oreo mini creme biscuits 10 pack 204g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/9/9260124.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Oreo Mini Creme Biscuits 10 Pack 204g</h3>
@@ -1095,8 +1106,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="red rock deli style crackers 135g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/5484651.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="red rock deli style crackers 135g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/5484651.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Red Rock Deli Style Crackers 135g</h3>
@@ -1105,8 +1116,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="smith&#x27;s crinkle cut potato chips 150g-170g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2358275.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="smith&#x27;s crinkle cut potato chips 150g-170g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2358275.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Smith&#x27;s Crinkle Cut Potato Chips 150g-170g</h3>
@@ -1115,8 +1126,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="the natural confectionery co. or sour patch kids lollies 130g-230g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5500791.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="the natural confectionery co. or sour patch kids lollies 130g-230g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5500791.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>The Natural Confectionery Co. or Sour Patch Kids Lollies 130g-230g</h3>
@@ -1125,8 +1136,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="powerade sports drink or active water 600ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1726001.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="powerade sports drink or active water 600ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1726001.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Powerade Sports Drink or Active Water 600mL</h3>
@@ -1135,8 +1146,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="infuzions veggie straws or prawn crackers 90g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5007335.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="infuzions veggie straws or prawn crackers 90g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/5/5007335.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Infuzions Veggie Straws or Prawn Crackers 90g</h3>
@@ -1145,8 +1156,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="饮品" data-name="boss coffee 237ml">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4476727.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="饮品" data-type="half" data-name="boss coffee 237ml">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4476727.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">饮品</div>
     <h3>Boss Coffee 237mL</h3>
@@ -1155,8 +1166,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="smith&#x27;s crackers 160g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1108057.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="smith&#x27;s crackers 160g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1108057.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Smith&#x27;s Crackers 160g</h3>
@@ -1165,8 +1176,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="twisties, burger rings or cheetos 110g-155g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2001616.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="twisties, burger rings or cheetos 110g-155g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/2/2001616.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Twisties, Burger Rings or Cheetos 110g-155g</h3>
@@ -1175,8 +1186,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="ritz crackers 217g-227g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6164463.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="ritz crackers 217g-227g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/6/6164463.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Ritz Crackers 217g-227g</h3>
@@ -1185,8 +1196,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="oreo creme cookies 136g-140g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1715344.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="oreo creme cookies 136g-140g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/1/1715344.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Oreo Creme Cookies 136g-140g</h3>
@@ -1195,8 +1206,8 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
     <a class="src" href="https://www.coles.com.au/on-special" target="_blank" rel="noopener">Coles 官方特价页</a>
   </div>
 </article>
-<article class="card" data-cat="零食糖果" data-name="nestlé chocolate bar 35g-50g">
-  <div class="ph ph-imgwrap"><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4457438.jpg" alt="产品图" loading="lazy"></div>
+<article class="card" data-cat="零食糖果" data-type="half" data-name="nestlé chocolate bar 35g-50g">
+  <div class="ph ph-imgwrap"><span class="badge badge-half">半价</span><img class="ph-img" src="https://cdn.productimages.coles.com.au/productimages/4/4457438.jpg" alt="产品图" loading="lazy"></div>
   <div class="body">
     <div class="cat">零食糖果</div>
     <h3>Nestlé Chocolate Bar 35g-50g</h3>
@@ -1206,15 +1217,15 @@ footer{max-width:1100px;margin:0 auto;padding:0 12px 30px;font-size:13px;color:#
   </div>
 </article>
   </div>
-  <p class="empty" hidden>没有符合条件的商品，换个关键词或分类试试。</p>
+  <p class="empty" hidden>没有符合条件的商品，换个关键词、分类或折扣类型试试。</p>
 </section>
 </div>
 <footer>
   <p>数据来源：OzBargain 本周半价目录汇总（https://www.ozbargain.com.au/node/985018），价格为昆士兰州（QLD）目录参考价，各门店实际价格可能有差异，请以门店为准。</p>
-  <p>说明：本页 115 件商品已全部配上真实产品图（Woolworths 47 件、Coles 68 件，图片为各商品的原始公开产品图（超市官网图库及品牌/零售商公开图片））；商品名、价格和折扣均为真实抓取数据。</p>
+  <p>说明：本页 115 件商品已全部配上真实产品图（Woolworths 47 件、Coles 68 件，图片为各商品的原始公开产品图（超市官网图库及品牌/零售商公开图片））；商品名、价格和折扣均为真实抓取数据。折扣说明：半价 = 便宜 50%；低于半价 = 便宜超过 50%；促销 = 便宜不到 50%（本期 0 件）。</p>
 </footer>
 <script>
-var cur='woolworths';
+var cur='woolworths';var curType='全部';
 function showStore(s){
   cur=s;
   document.getElementById('woolworths').style.display = s==='woolworths' ? '' : 'none';
@@ -1231,6 +1242,13 @@ document.querySelectorAll('.chips').forEach(function(box){
     }
   });
 });
+document.getElementById('typeChips').addEventListener('click', function(e){
+  if(e.target.classList.contains('type-chip')){
+    document.querySelectorAll('.type-chip').forEach(function(c){c.classList.remove('on')});
+    e.target.classList.add('on');
+    curType = e.target.dataset.type; applyFilter();
+  }
+});
 function applyFilter(){
   var q = document.getElementById('q').value.trim().toLowerCase();
   var sec = document.getElementById(cur);
@@ -1238,7 +1256,8 @@ function applyFilter(){
   var cat = chip ? chip.dataset.cat : '全部';
   var visible = 0;
   sec.querySelectorAll('.card').forEach(function(card){
-    var ok = (cat==='全部' || card.dataset.cat===cat) && (!q || card.dataset.name.indexOf(q)>-1);
+    var okType = (curType==='全部' || card.dataset.type===curType);
+    var ok = okType && (cat==='全部' || card.dataset.cat===cat) && (!q || card.dataset.name.indexOf(q)>-1);
     card.style.display = ok ? '' : 'none';
     if(ok) visible++;
   });
